@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+.cta-icon-block{
+  align-items: center;
+  margin: 0 rem(21);
+  display: flex;
+  &--content{
+    margin-left: rem(16);
+    .title{
+      @include fluid-text(20, 12);
+      font-weight: 400;
+      line-height: 140%;
+      color: var(--color-dark);
+    }
+    span{
+      font-size: rem(12);
+      display: block;
+    }
+  }
+}

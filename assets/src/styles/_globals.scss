@@ -1,0 +1,140 @@
+@use 'helpers' as *;
+html {
+  box-sizing: border-box;
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include fluid-text(16, 14);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  color: var(--color-dark-40);
+  background-color: var(--color-light);
+  font-weight: 400;
+  line-height: 1.25;
+  &.t-overflow{
+    overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+.relative{
+  position: relative;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: var(--color-dark);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+}
+
+h1, .h1 {
+  @include fluid-text(48, 28);
+  font-weight: 600;
+  line-height: 117%;
+  color: var(--color-dark);
+  margin-top: rem(16);
+  margin-bottom: rem(40);
+  span{
+    color: var(--color-gray-20);
+  }
+}
+
+h2, .h2 {
+  @include fluid-text(40, 28);
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--color-dark);
+}
+
+h3, .h3 {
+  @include fluid-text(20, 18);
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+h4, .h4 {
+  @include fluid-text(18, 16);
+  font-weight: 600;
+}
+
+h5, .h5 {
+  @include fluid-text(24, 18);
+}
+
+h6, .h6 {
+  @include fluid-text(20, 16);
+}
+
+p {
+  --paragraphMarginBottom: #{rem(24)};
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  @include hover {
+    color: var(--accent);
+  }
+}
+
+
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+  }
+}
+
+a.link-icon{
+  position: relative;
+  color: var(--accent);
+  &:after{
+    content: '';
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01Ljg4MTg5IDUuMjY1MjFMMS4yODM0NiA5Ljg4Mjk5QzEuMTI1OTggMTAuMDM5IDAuODc0MDE2IDEwLjAzOSAwLjc0ODAzMSA5Ljg4Mjk5TDAuMTE4MTEgOS4yNTg5N0MtMC4wMzkzNzAxIDkuMTAyOTYgLTAuMDM5MzcwMSA4Ljg4NDU1IDAuMTE4MTEgOC43Mjg1NUwzLjgzNDY1IDQuOTg0NEwwLjExODExIDEuMjcxNDVDLTAuMDM5MzcwMSAxLjExNTQ0IC0wLjAzOTM3MDEgMC44NjU4MzUgMC4xMTgxMSAwLjc0MTAzTDAuNzQ4MDMxIDAuMTE3MDA1QzAuODc0MDE2IC0wLjAzOTAwMTYgMS4xMjU5OCAtMC4wMzkwMDE2IDEuMjgzNDYgMC4xMTcwMDVMNS44ODE4OSA0LjczNDc5QzYuMDM5MzcgNC44OTA4IDYuMDM5MzcgNS4xMDkyIDUuODgxODkgNS4yNjUyMVoiIGZpbGw9IiMxNDUyQ0MiLz4KPC9zdmc+Cg==");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: rem(7);
+    display: block;
+    top: rem(4);
+    position: relative;
+    margin-left: 10px;
+  }
+  @include hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,53 @@
+@use '../helpers' as *;
+.icon{
+  border: var(--border);
+  border-radius: var(--rounded-8);
+  padding: rem(4);
+  width: rem(30);
+  height: rem(30);
+  display: inline-flex;
+  align-items: center;
+  column-gap: rem(10);
+  position: relative;
+  @include media(sm){
+    padding: rem(4);
+    width: rem(36);
+    height: rem(36);
+  }
+  @include media(md){
+    width: rem(48);
+    height: rem(48);
+    padding: rem(8);
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    background: var(--color-secondary);
+    border-radius: 8px;
+    transform-origin: 50% 50%;
+    transform: scale(0);
+    transition: all .35s;
+  }
+  &:hover {
+    &:after {
+      transform: scale(1);
+    }
+    svg{
+      transform: scale(1.05);
+      path{
+        fill: var(--color-light);
+      }
+    }
+  }
+  svg{
+    position: relative;
+    z-index: 1;
+    path{
+      fill: var(--color-secondary);
+    }
+  }
+}

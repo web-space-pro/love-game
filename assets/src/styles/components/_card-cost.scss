@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.card-cost{
+  border-radius: var(--rounded-8);
+  padding: fluid(24, 18);
+  background: var(--color-light-10);
+  transition: all .4s ease;
+  &:hover{
+    box-shadow: 0 0 rem(20) var(--color-gray-10);
+  }
+  h3{
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: rem(8);
+    @include fluid-text(16, 14);
+    line-height: 1.5;
+  }
+  span{
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+  &.cta{
+    background: var(--color-secondary);
+    color: var(--color-light-10);
+    text-align: center;
+    grid-column: span 2;
+    @include media(md){
+      grid-column: auto;
+    }
+    h3{
+      color: var(--color-light-10);
+      font-size: rem(12);
+    }
+  }
+}
