@@ -1,12 +1,12 @@
 <?php
-add_action('wp_enqueue_scripts', 'custom_theme_theme_scripts');
-add_action('wp_enqueue_scripts', 'custom_theme_theme_styles');
+add_action('wp_enqueue_scripts', 'love_not_game_theme_scripts');
+add_action('wp_enqueue_scripts', 'love_not_game_theme_styles');
 
 add_filter( 'style_loader_src',  'sdt_remove_ver_css_js', 9999, 2 );
 add_filter( 'script_loader_src', 'sdt_remove_ver_css_js', 9999, 2 );
 
 
-function custom_theme_theme_scripts()
+function love_not_game_theme_scripts()
 {
 	$ver = wp_get_theme()->get( 'Version' );
 
@@ -25,7 +25,7 @@ function custom_theme_theme_scripts()
     }
 }
 
-function custom_theme_theme_styles()
+function love_not_game_theme_styles()
 {
 	$ver = wp_get_theme()->get( 'Version' );
 

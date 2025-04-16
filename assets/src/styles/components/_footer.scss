@@ -1,111 +1,26 @@
 @use '../helpers' as *;
 .footer{
-  padding-top: rem(50);
-  padding-bottom: rem(30);
-  .title{
-    @include fluid-text(28, 18);
-    margin-bottom: rem(24);
-  }
-  &__top{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: rem(20);
-    padding-bottom: rem(20);
-    @include media(sm){
-      grid-template-columns: repeat(2, 1fr);
-    }
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  .flex-wrap{
+    flex-direction: column;
+    gap: rem(16);
     @include media(md){
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: rem(20);
-      padding-bottom: rem(40);
-    }
-    > div{
-      padding-bottom: rem(20);
-      @include media(md){
-        padding-bottom: rem(0);
-      }
-    }
-  }
-  &__bottom{
-    border-top: 1px solid var(--color-gray-10);
-    padding-top: rem(24);
-    color: var(--color-dark-40);
-    .grid{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: rem(20);
-    }
-  }
-
-
-  &__contacts{
-    order: 3;
-    @include media(sm){
-      order: 1;
-    }
-    ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      font-weight: 400;
-      color: var(--color-dark);
-      span{
-        color: var(--color-gray-20);
-        display: block;
-      }
-      li{
-        margin-bottom: rem(10);
-      }
-    }
-  }
-  &__menu{
-    order: 2;
-
-    li{
-      position: relative;
-      display: block;
-      margin-bottom: rem(10);
-      a{
-        display: inline-block;
-        text-decoration: none;
-      }
-      .caret{
-        right: auto;
-      }
-    }
-  }
-  &__info{
-    font-weight: 400;
-    order: 1;
-    @include media(sm){
-      order: 3;
-    }
-    .logo{
-      margin-bottom: rem(24);
-    }
-    div{
-      font-weight: 400;
-      color: var(--color-dark-40);
-      margin-bottom: rem(2);
-      &:last-child{
-        color: var(--color-gray-20);
-        margin-bottom: rem(0);
-        margin-top: rem(20);
-      }
+      flex-direction: row;
     }
   }
   &__copyright{
-    max-width: rem(260);
+    letter-spacing: -0.01em;
+    color: #677371;
+    text-align: center;
+    @include media(md){
+      text-align: right;
+    }
   }
   &__develop{
-    max-width: rem(130);
-    margin: 0 0 0 auto;
     a{
-      text-decoration: none;
-    }
-    span{
-      display: block;
-      color: var(--color-accent);
+      color: var(--accent);
+      letter-spacing: -0.01em;
     }
   }
 }

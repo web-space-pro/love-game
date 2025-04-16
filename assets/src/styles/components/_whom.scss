@@ -1,0 +1,54 @@
+@use '../helpers/index' as *;
+.whom{
+  padding: fluid(80,40) 0;
+  h2{
+    text-align: center;
+    font-weight: 500;
+    span{
+      font-weight: 500;
+      font-family: var(--font-family);
+      font-size: fluid(56,36);
+    }
+  }
+  &__items{
+    display: grid;
+    gap: rem(16);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: rem(40);
+    @include media(sm){
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .item{
+      box-shadow: 0 4px 12px -4px rgba(64, 3, 18, 0.05);
+      background: var(--bg-2);
+      border-radius: 24px;
+      padding: fluid(24,18);
+      transition: all .3s ease;
+      &:hover{
+        box-shadow: 0 4px 15px -4px rgba(230, 46, 52, 0.45);
+      }
+      figure{
+        margin-bottom: rem(25);
+        position: relative;
+        border-radius: 16px;
+        height: rem(220);
+        overflow: hidden;
+        background: rgba(230, 46, 52, 0.45);
+        @include media(sm){
+          margin-bottom: rem(32);
+          height: 20vmax;
+        }
+      }
+      h3{
+        text-align: center;
+        font-weight: 500;
+        font-size: fluid(24,20);
+        padding: 0 rem(10);
+      }
+    }
+  }
+  &__btn{
+    margin-top: rem(40);
+    text-align: center;
+  }
+}

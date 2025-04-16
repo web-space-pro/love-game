@@ -1,0 +1,215 @@
+@use '../helpers/index' as *;
+.story{
+  margin-top: rem(40);
+  position: relative;
+  @include media(rxl){
+    margin-top: rem(120);
+  }
+  &__wrap{
+    background: var(--bg-2);
+    border-radius: rem(24);
+    padding: rem(16) rem(20);
+    background-size: cover;
+    background-position:  bottom;
+    @include media(sm){
+      border-radius: rem(40);
+      padding: rem(30) rem(40);
+    }
+    @include media(rxl){
+      padding: rem(64) rem(80);
+    }
+  }
+  &__content{
+    margin-top: rem(25);
+    flex-direction: column-reverse;
+    @include media(sm){
+      flex-direction: row;
+      margin-top: rem(50);
+    }
+    &__items{
+      position: relative;
+      z-index: 1;
+      @include media(md){
+        padding-top: rem(50);
+      }
+      .item{
+        box-shadow: 0 4px 12px -4px rgba(64, 3, 18, 0.05);
+        background: var(--bg-2);
+        border-right: rem(3) solid var(--accent);
+        border-radius: rem(24);
+        padding: rem(18) rem(20);
+        margin-bottom: 16px;
+        min-width: 26vw;
+        position: relative;
+        @include media(lg){
+          padding: rem(32) rem(40);
+        }
+        &:first-child{
+          @include media(md){
+            right: 5vw;
+          }
+        }
+        &:last-child{
+          @include media(md){
+            right: 10vw;
+          }
+        }
+        h3{
+          margin-bottom: rem(34);
+          font-weight: 500;
+          font-size: rem(40);
+          line-height: 120%;
+          background: linear-gradient(45deg, #e31e24 0%, #f26d71 50%, #e31e24 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          @include media(rxl){
+            margin-bottom: rem(64);
+          }
+        }
+        p{
+          font-weight: 400;
+          font-size: fluid(18,16);
+        }
+      }
+    }
+    &__image{
+      max-width: 100%;
+      width: 50%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      @include media(md){
+        margin: 0;
+        max-width: 40%;
+        width: 40%;
+      }
+      @include media(lg){
+        max-width: 50%;
+        width: 45%;
+      }
+      @include media(rwd){
+        max-width: 40%;
+        width: 40%;
+      }
+      img{
+        height: 100%;
+        @include media(md){
+          height: auto;
+        }
+        @include media(lg){
+          height: 100%;
+        }
+      }
+    }
+  }
+  &__left{
+    width: 100%;
+    @include media(sm){
+      width: 60%;
+    }
+    @include media(rxl){
+      width: 45%;
+    }
+    .box{
+      margin-top: rem(50);
+    }
+    .item{
+      background: var(--bg-2);
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: rem(24);
+      font-size: 18px;
+      margin-bottom: rem(40);
+      max-width: rem(300);
+      position: relative;
+      span{
+        font-weight: 600;
+        color: var(--accent);
+      }
+      &:first-child{
+        figure{
+          width: rem(112);
+          height: rem(112);
+          top: -38px;
+          right: -30px;
+          position: absolute;
+          &.img2,&.img3{
+            width: rem(40);
+            height: rem(40);
+            filter: blur(2px);
+          }
+          &.img2{
+            top: -18px;
+            right: 30%;
+          }
+          &.img3{
+            top: auto;
+            bottom: -20px;
+            right: 10%;
+          }
+        }
+      }
+      &:last-child{
+        padding-left: rem(100);
+        @include media(sm){
+          padding-left: rem(120);
+        }
+        figure{
+          width: rem(112);
+          height: rem(112);
+          top: -50px;
+          left: -14px;
+          position: absolute;
+          &.img2{
+            width: rem(40);
+            height: rem(40);
+            filter: blur(2px);
+            transform: rotate(-27deg);
+            top: auto;
+            bottom: -15px;
+            left: 15%;
+          }
+        }
+      }
+    }
+  }
+  &__right{
+    width: 100%;
+    @include media(sm){
+      width: 40%;
+    }
+    @include media(rxl){
+      width: 55%;
+    }
+    figure{
+      width: 60%;
+      margin: 0 auto;
+      @include media(sm){
+        margin: 0;
+        width: auto;
+      }
+      @include media(rxl){
+        position: absolute;
+        top: -18%;
+        bottom: -17%;
+        right: 10vw;
+      }
+    }
+  }
+
+  .decor{
+    width: fluid(143,60);
+    height: fluid(143,60);
+    position: absolute;
+    pointer-events: none;
+    &.--first{
+      top: 3%;
+      left: -2%;
+      transform: rotate(18deg);
+      @include media(sm){
+        top: 3%;
+      }
+    }
+  }
+}

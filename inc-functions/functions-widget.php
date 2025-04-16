@@ -2,7 +2,7 @@
 /**
  * Register widget area.
  */
-function custom_theme_theme_widgets_init() {
+function love_not_game_theme_widgets_init() {
     register_sidebar(
         array(
             'name'          => esc_html__( 'Sidebar', 'love-not-game' ),
@@ -15,4 +15,4 @@ function custom_theme_theme_widgets_init() {
         )
     );
 }
-add_action( 'widgets_init', 'custom_theme_theme_widgets_init' );
+add_action( 'widgets_init', 'love_not_game_theme_widgets_init' );

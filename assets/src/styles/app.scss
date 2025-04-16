@@ -1,6 +1,11 @@
-@import 'normalize';
-@import 'vendors';
-@import 'fonts';
-@import 'variables';
-@import 'utils';
-@import 'globals';
+@import 'base/normalize';
+@import 'helpers/variables';
+@import 'base/vendors';
+@import 'base/fonts';
+@import 'base/utils';
+@import 'base/globals';
+
+@import "UI/ui";
+@import 'components/components';
+
+@import "pages/pages";

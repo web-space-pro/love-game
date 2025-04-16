@@ -1,0 +1,19 @@
+@use 'index' as *;
+
+:root {
+  --bg: #fcf7f8;
+  --accent: #e62e34;
+  --bg-2: #fff;
+  --button-text: #f9f9f9;
+  --button-text-2: #e62e34;
+  --button-fill-2: #ffe6e6;
+  --text-heading: #323232;
+  --text-paragraph: #666;
+  --text-hint: #999;
+
+  --font-family: "Qanelas", sans-serif;
+  --second-family: "Comforter", sans-serif;
+
+  --container-width: 100%;
+  --container-padding-x: #{fluid(96,16)};
+}

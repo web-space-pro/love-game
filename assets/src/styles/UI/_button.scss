@@ -1,0 +1,38 @@
+@use '../helpers/index' as *;
+
+.btn{
+  box-shadow: 0 4px 0 0 #b21217;
+  background: linear-gradient(45deg, #e31e24 0%, #f26d71 50%, #e31e24 100%);
+  border-radius: 100px;
+  padding: 16px 20px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--button-text);
+  display: inline-block;
+  position: relative;
+  @include media(md){
+    padding: 29px 40px 27px 40px;
+  }
+  &:hover{
+    color: var(--button-text);
+    box-shadow: none;
+  }
+  &.--ozon{
+    box-shadow: 0 4px 0 0 #003599;
+    background: #045afe;
+    &:hover{
+      box-shadow: none;
+    }
+  }
+  &.--wb{
+    box-shadow: 0 4px 0 0 #5300bf;
+    background: linear-gradient(45deg, #6f03fb 0%, #fd4bd8 100%);
+    &:hover{
+      box-shadow: none;
+    }
+  }
+}

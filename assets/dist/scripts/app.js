@@ -54,6 +54,16 @@ try {
     }
   });
 })(jQuery);
+function toggleHeaderScroll() {
+  var header = document.querySelector('header');
+  if (window.scrollY > 1) {
+    header.classList.add('scroll');
+  } else {
+    header.classList.remove('scroll');
+  }
+}
+window.addEventListener('scroll', toggleHeaderScroll);
+window.addEventListener('load', toggleHeaderScroll);
 
 /***/ }),
 
@@ -78,69 +88,35 @@ jQuery(function ($) {
   \********************************************/
 /***/ (() => {
 
-(function ($, root, undefined) {
-  $(document).ready(function () {
-    function btnMenu() {
-      var btn = $(".btn-menu");
-      var mobileMenu = $(".mobileMenu");
-      var body = $('body');
-      if (btn.length > 0) {
-        btn.click(function () {
-          btn.toggleClass('active');
-          mobileMenu.toggleClass('show');
-          body.toggleClass('t-overflow');
-        });
-      }
-    }
-    function subMenu() {
-      $("ul.menu li.menu-item-has-children a[href='/']").click(function (e) {
-        e.preventDefault();
-      });
-      $(".menu-item-has-children").each(function () {
-        var menuItem = $(this);
-        var caret = menuItem.find(".caret");
+document.addEventListener("DOMContentLoaded", function () {
+  var burger = document.querySelector(".burger input");
+  var mobileMenu = document.querySelector(".mobileMenu");
+  var dropdowns = mobileMenu.querySelectorAll(".menu-item-has-children");
 
-        // Открытие/закрытие подменю при клике на caret
-        caret.on("click", function (e) {
-          e.stopPropagation(); // Остановить всплытие события
-
-          var subMenu = menuItem.find(".sub-menu");
-
-          // Закрыть другие подменю
-          $(".menu-item-has-children .sub-menu.show").not(subMenu).removeClass("show");
-
-          // Показать/скрыть текущее подменю
-          subMenu.toggleClass("show");
-        });
-
-        // Скрыть подменю при потере фокуса
-        menuItem.on("focusout", function (e) {
-          var isInside = $(e.relatedTarget).closest(menuItem).length > 0; // Проверяем, куда переместился фокус
-          if (!isInside) {
-            menuItem.find(".sub-menu").removeClass("show");
-          }
-        });
-      });
-
-      // Скрыть все подменю при клике вне меню
-      $(document).on("click", function () {
-        $(".menu-item-has-children .sub-menu.show").removeClass("show");
-      });
-    }
-    function mobileSubMenu() {
-      $(".menu-mobile li.menu-item-has-children").on('click', function (e) {
-        e.preventDefault();
-        $(this).toggleClass('show');
-      });
-      $("ul.menu li.menu-item-has-children a[href='/']").click(function (e) {
-        e.preventDefault();
-      });
-    }
-    btnMenu();
-    subMenu();
-    // mobileSubMenu();
+  // Открытие/закрытие mobileMenu
+  burger.addEventListener("change", function () {
+    mobileMenu.classList.toggle("active");
   });
-})(jQuery);
+
+  // Обработка кликов на элементы с sub-menu
+  dropdowns.forEach(function (dropdown) {
+    var link = dropdown.querySelector(".caret");
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      dropdown.classList.toggle("active");
+      var nextLi = dropdown.nextElementSibling;
+      console.log(nextLi);
+      if (nextLi) {
+        var height = dropdown.querySelector(".sub-menu").offsetHeight;
+        if (dropdown.classList.contains("active")) {
+          nextLi.style.marginTop = "".concat(height, "px");
+        } else {
+          nextLi.style.marginTop = "0";
+        }
+      }
+    });
+  });
+});
 
 /***/ }),
 
@@ -157,16 +133,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.EffectFade, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Manipulation]);
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".banner-slider", {
+var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.slider', {
+  slidesPerView: 4,
   loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   },
-  slidesPerView: 1,
-  effect: "fade",
-  mousewheel: true,
-  keyboard: true
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    992: {
+      slidesPerView: 3
+    },
+    1280: {
+      slidesPerView: 4
+    }
+  }
 });
 
 /***/ }),

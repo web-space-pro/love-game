@@ -1,0 +1,145 @@
+@use '../helpers/index' as *;
+
+/* Общий стиль скроллбара */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Ползунок */
+::-webkit-scrollbar-thumb {
+  background-color: #e62e34;
+  border-radius: 6px;
+}
+
+/* Фон скроллбара (дорожка) */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+* {
+  scrollbar-color: #e62e34 #f1f1f1; /* thumb track */
+  scrollbar-width: thin;
+}
+html {
+  box-sizing: border-box;
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include fluid-text(19, 16);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  color: var(--text-paragraph);
+  background-color: var(--bg);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+  &.t-overflow{
+    overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+  min-height: calc(100dvh - 142px);
+}
+.relative{
+  position: relative;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: var(--text-heading);
+}
+
+
+h1, .h1 {
+  @include fluid-text(88, 68);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+h2{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: fluid(56,32);
+  line-height: 114%;
+  color: var(--text-heading);
+  span{
+    font-family: var(--second-family);
+    font-size: fluid(80,40);
+    line-height: 90%;
+    font-weight: 400;
+    color: var(--accent);
+  }
+}
+
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: .3s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  @include hover {
+    color: var(--accent);
+  }
+}
+
+
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+  }
+}
+
+a.link-icon{
+  position: relative;
+  color: var(--accent);
+  &:after{
+    content: '';
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01Ljg4MTg5IDUuMjY1MjFMMS4yODM0NiA5Ljg4Mjk5QzEuMTI1OTggMTAuMDM5IDAuODc0MDE2IDEwLjAzOSAwLjc0ODAzMSA5Ljg4Mjk5TDAuMTE4MTEgOS4yNTg5N0MtMC4wMzkzNzAxIDkuMTAyOTYgLTAuMDM5MzcwMSA4Ljg4NDU1IDAuMTE4MTEgOC43Mjg1NUwzLjgzNDY1IDQuOTg0NEwwLjExODExIDEuMjcxNDVDLTAuMDM5MzcwMSAxLjExNTQ0IC0wLjAzOTM3MDEgMC44NjU4MzUgMC4xMTgxMSAwLjc0MTAzTDAuNzQ4MDMxIDAuMTE3MDA1QzAuODc0MDE2IC0wLjAzOTAwMTYgMS4xMjU5OCAtMC4wMzkwMDE2IDEuMjgzNDYgMC4xMTcwMDVMNS44ODE4OSA0LjczNDc5QzYuMDM5MzcgNC44OTA4IDYuMDM5MzcgNS4xMDkyIDUuODgxODkgNS4yNjUyMVoiIGZpbGw9IiMxNDUyQ0MiLz4KPC9zdmc+Cg==");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: rem(7);
+    display: block;
+    top: rem(4);
+    position: relative;
+    margin-left: 10px;
+  }
+  @include hover {
+    text-decoration: underline;
+  }
+}
+
+ul,ol{
+  padding: 0;
+  margin: 0;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

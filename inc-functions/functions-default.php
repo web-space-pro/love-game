@@ -4,8 +4,8 @@ if ( ! current_user_can( 'manage_options' ) ) {
     show_admin_bar( false );
 }
 
-add_action( 'after_setup_theme', 'custom_theme_theme_setup' );
-function custom_theme_theme_setup() {
+add_action( 'after_setup_theme', 'love_not_game_theme_setup' );
+function love_not_game_theme_setup() {
     /*
         * Make theme available for translation.
         * Translations can be filed in the /languages/ directory.

@@ -1,0 +1,108 @@
+@use '../helpers/index' as *;
+.feature{
+  padding: fluid(20,40) 0;
+  position: relative;
+  overflow: hidden;
+  h2{
+    text-align: center;
+    span{
+      font-family: var(--second-family);
+    }
+  }
+  &__desc{
+    max-width: rem(440);
+    margin: fluid(20,40) auto;
+    text-align: center;
+  }
+  &__items{
+    display: grid;
+    gap: rem(70);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: rem(60);
+    @include media(sm){
+      gap: rem(16);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @include media(lg){
+      margin-top: rem(100);
+    }
+    .item{
+      box-shadow: 0 4px 12px -4px rgba(64, 3, 18, 0.05);
+      background: var(--bg-2);
+      border-radius: 24px;
+      padding: fluid(25,16);
+      transition: all .3s ease;
+      @include media(lg){
+        padding: fluid(55,25);
+      }
+      &:hover{
+        box-shadow: 0 4px 15px -4px rgba(230, 46, 52, 0.45);
+      }
+      figure{
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: rem(16);
+        margin-top: -15%;
+        @include media(sm){
+          margin-top: rem(-100);
+          margin: 0;
+          width: 100%;
+        }
+        @include media(lg){
+          margin-top: rem(-120);
+          margin-bottom: rem(40);
+        }
+      }
+      h3{
+        font-weight: 500;
+        font-size: fluid(40,32);
+        margin-bottom: fluid(26,24);
+        text-align: center;
+        @include media(sm){
+          text-align: left;
+        }
+      }
+      p{
+        line-height: 133%;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        @include media(sm){
+          margin: 0;
+          text-align: left;
+          width: 100%;
+        }
+        @include media(lg){
+          width: 85%;
+        }
+      }
+
+    }
+  }
+
+  .decor{
+    position: absolute;
+    pointer-events: none;
+    &.--first{
+      width: fluid(200,90);
+      height: fluid(200,90);
+      top: 5%;
+      left: -3%;
+      @include media(sm){
+        top: 7%;
+      }
+    }
+    &.--second{
+      width: fluid(180,80);
+      height: fluid(180,80);
+      right: -2%;
+      bottom: 10%;
+      transform: rotate(40deg);
+      @include media(sm){
+        right: -3%;
+        top: 20%;
+      }
+    }
+  }
+}

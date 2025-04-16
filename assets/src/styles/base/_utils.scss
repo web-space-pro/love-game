@@ -1,0 +1,45 @@
+@use '../helpers/index' as *;
+.container{
+  max-width: var(--container-width);
+  width: var(--container-width);
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+.flex{
+  display: flex;
+}
+.item-center{
+  align-items: center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.gap-4{
+  gap: rem(16);
+}
+
+.heartbeat {
+  width: 150px;
+  animation: beat 1s infinite ease-in-out;
+  transform-origin: center;
+}
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(0.95); }
+  75% { transform: scale(1.1); }
+}
+
+.gift {
+  width: 120px;
+  animation: wiggle 1.5s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+}

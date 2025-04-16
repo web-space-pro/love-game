@@ -27,8 +27,8 @@
             <?php if ( 'post' === get_post_type() ) :?>
             <div class="entry-meta">
                 <?php
-                custom_theme_posted_on();
-                custom_theme_posted_by();
+                love_not_game_posted_on();
+                love_not_game_posted_by();
                 ?>
             </div>
             <?php endif; ?>

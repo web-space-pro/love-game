@@ -1,20 +1,29 @@
 import Swiper from 'swiper';
 import {Autoplay, EffectFade, Navigation, Pagination, Manipulation} from 'swiper/modules';
-
-
 Swiper.use([Navigation, Pagination, Autoplay, EffectFade, Manipulation]);
 
-
-let swiper = new Swiper(".banner-slider", {
+const swiper = new Swiper('.slider', {
+    slidesPerView: 4,
     loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-    slidesPerView: 1,
-    effect: "fade",
-    mousewheel: true,
-    keyboard: true,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1280: {
+            slidesPerView: 4,
+        }
+    }
 });
 
 

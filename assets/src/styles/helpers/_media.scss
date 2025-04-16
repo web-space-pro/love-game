@@ -6,13 +6,14 @@ $mobile: 767.98;
 $mobile-s: 480.98;
 
 $media-types: (
-        xs: '(min-width: 320px)',
-        sm: '(min-width: 576px)',
+        xs: '(min-width: 360px)',
+        sm: '(min-width: 600px)',
         md: '(min-width: 768px)',
         lg: '(min-width: 992px)',
-        xl: '(min-width: 1200.98px)',
-        hd: '(min-width: 1366.98px)',
-        rwd: '(min-width: 1440.98px)',
+        xl: '(min-width: 1024px)',
+        rxl: '(min-width: 1280px)',
+        hd: '(min-width: 1366px)',
+        rwd: '(min-width: 1440px)',
 );
 @mixin media($media) {
   @media #{map-get($media-types, $media)} {

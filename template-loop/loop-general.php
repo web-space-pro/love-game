@@ -6,7 +6,7 @@
     <a href="<?=get_permalink()?>" target="_self">
         <div class="relative">
             <div class="services__photo">
-                <?php custom_theme_post_thumbnail();?>
+                <?php love_not_game_post_thumbnail();?>
             </div>
         </div>
         <div class="services__title">

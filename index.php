@@ -50,8 +50,8 @@ get_header();
             endif;
             ?>
         </div>
-	</main><!-- #main -->
+	</main>
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

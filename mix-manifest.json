@@ -1,10 +1,9 @@
 {
     "/assets/dist/scripts/app.js": "/assets/dist/scripts/app.js",
     "/assets/dist/css/app.css": "/assets/dist/css/app.css",
-    "/assets/dist/fonts/Involve-Medium.ttf": "/assets/dist/fonts/Involve-Medium.ttf",
-    "/assets/dist/fonts/Involve-Regular.otf": "/assets/dist/fonts/Involve-Regular.otf",
-    "/assets/dist/fonts/Involve-Regular.ttf": "/assets/dist/fonts/Involve-Regular.ttf",
-    "/assets/dist/fonts/Involve-SemiBold.otf": "/assets/dist/fonts/Involve-SemiBold.otf",
-    "/assets/dist/fonts/Involve-SemiBold.ttf": "/assets/dist/fonts/Involve-SemiBold.ttf",
+    "/assets/dist/fonts/Comforter/Comforter-Regular.ttf": "/assets/dist/fonts/Comforter/Comforter-Regular.ttf",
+    "/assets/dist/fonts/qanelas/Qanelas-Medium.ttf": "/assets/dist/fonts/qanelas/Qanelas-Medium.ttf",
+    "/assets/dist/fonts/qanelas/Qanelas-Regular.ttf": "/assets/dist/fonts/qanelas/Qanelas-Regular.ttf",
+    "/assets/dist/fonts/qanelas/Qanelas-SemiBold.ttf": "/assets/dist/fonts/qanelas/Qanelas-SemiBold.ttf",
     "/assets/dist/scripts/plugins/jquery.maskedinput.min.js": "/assets/dist/scripts/plugins/jquery.maskedinput.min.js"
 }

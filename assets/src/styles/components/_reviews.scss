@@ -1,0 +1,45 @@
+@use '../helpers/index' as *;
+.reviews{
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  margin-top: rem(-25);
+  @include media(sm){
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+  }
+  h2{
+    font-weight: 500;
+    @include media(rxl){
+      width: 50%;
+    }
+    span{
+      font-weight: 500;
+      font-family: var(--font-family);
+      font-size: fluid(56,36);
+    }
+  }
+  .swiper{
+    padding-top: rem(50);
+    .nav{
+      top: rem(20);
+      &:after{
+        content: none;
+      }
+    }
+    .swiper-button-prev{
+      right: 60px;
+      left: auto;
+    }
+  }
+  figure{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #d9d9d9;
+    pointer-events: none;
+  }
+  .swiper-slide {
+    height: clamp(250px, 30vw, 368px);
+  }
+}
