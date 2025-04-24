@@ -48,20 +48,20 @@
     }
     @include media(hd){
       padding-top: rem(60);
-      width: 33%;
-      max-width: 33%;
+      width: 35%;
+      max-width: 35%;
     }
     h1{
       font-weight: 500;
       line-height: 91%;
       font-size: fluid(88,48);
-    }
-    h3{
-      font-family: var(--second-family);
-      font-size: fluid(96,68);
-      line-height: 92%;
-      color: var(--accent);
-      font-weight: 400;
+      span{
+        font-family: var(--second-family);
+        font-size: fluid(96,68);
+        line-height: 92%;
+        color: var(--accent);
+        font-weight: 400;
+      }
     }
     .box{
       margin-top: rem(48);
@@ -99,8 +99,8 @@
       max-width: 60%;
     }
     @include media(hd){
-      width: 67%;
-      max-width: 67%;
+      width: 65%;
+      max-width: 65%;
     }
     .box{
       position: absolute;

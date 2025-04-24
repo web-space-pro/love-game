@@ -23,6 +23,10 @@
 }
 html {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
   &.is-lock {
     overflow: hidden;
   }
@@ -63,7 +67,7 @@ h6, .h6 {
 
 
 h1, .h1 {
-  @include fluid-text(88, 68);
+  @include fluid-text(68,42);
   font-weight: 600;
   line-height: 1.15;
 }

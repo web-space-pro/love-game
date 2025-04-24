@@ -2,8 +2,16 @@
     "/assets/dist/scripts/app.js": "/assets/dist/scripts/app.js",
     "/assets/dist/css/app.css": "/assets/dist/css/app.css",
     "/assets/dist/fonts/Comforter/Comforter-Regular.ttf": "/assets/dist/fonts/Comforter/Comforter-Regular.ttf",
+    "/assets/dist/fonts/Comforter/Comforter-Regular.woff": "/assets/dist/fonts/Comforter/Comforter-Regular.woff",
+    "/assets/dist/fonts/Comforter/Comforter-Regular.woff2": "/assets/dist/fonts/Comforter/Comforter-Regular.woff2",
     "/assets/dist/fonts/qanelas/Qanelas-Medium.ttf": "/assets/dist/fonts/qanelas/Qanelas-Medium.ttf",
+    "/assets/dist/fonts/qanelas/Qanelas-Medium.woff": "/assets/dist/fonts/qanelas/Qanelas-Medium.woff",
+    "/assets/dist/fonts/qanelas/Qanelas-Medium.woff2": "/assets/dist/fonts/qanelas/Qanelas-Medium.woff2",
     "/assets/dist/fonts/qanelas/Qanelas-Regular.ttf": "/assets/dist/fonts/qanelas/Qanelas-Regular.ttf",
+    "/assets/dist/fonts/qanelas/Qanelas-Regular.woff": "/assets/dist/fonts/qanelas/Qanelas-Regular.woff",
+    "/assets/dist/fonts/qanelas/Qanelas-Regular.woff2": "/assets/dist/fonts/qanelas/Qanelas-Regular.woff2",
     "/assets/dist/fonts/qanelas/Qanelas-SemiBold.ttf": "/assets/dist/fonts/qanelas/Qanelas-SemiBold.ttf",
+    "/assets/dist/fonts/qanelas/Qanelas-SemiBold.woff": "/assets/dist/fonts/qanelas/Qanelas-SemiBold.woff",
+    "/assets/dist/fonts/qanelas/Qanelas-SemiBold.woff2": "/assets/dist/fonts/qanelas/Qanelas-SemiBold.woff2",
     "/assets/dist/scripts/plugins/jquery.maskedinput.min.js": "/assets/dist/scripts/plugins/jquery.maskedinput.min.js"
 }

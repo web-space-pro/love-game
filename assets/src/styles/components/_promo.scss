@@ -70,10 +70,10 @@
           font-weight: 500;
           font-size: rem(40);
           line-height: 120%;
-          background: linear-gradient(45deg, #e31e24 0%, #f26d71 50%, #e31e24 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: var(--text-heading);
+          span{
+            color: var(--accent);
+          }
           @include media(rxl){
             margin-bottom: rem(64);
           }

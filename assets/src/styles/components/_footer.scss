@@ -5,6 +5,7 @@
   .flex-wrap{
     flex-direction: column;
     gap: rem(16);
+    display: none;
     @include media(md){
       flex-direction: row;
     }

@@ -10,14 +10,20 @@
 get_header();
 ?>
 
-    <section class="error-404">
+    <section class="error404">
         <div class="container">
-            <div>
+            <div class="error404__content">
                 <h1>404</h1>
                 <h2>Упс! Эта страница не найдена.</h2>
-                <a class="button button--bordered" href="<?=get_home_url()?>" target="_self">Вернуться на главную</a>
+                <a class="btn" href="<?=get_home_url()?>" target="_self">Вернуться на главную</a>
            </div>
         </div>
+        <figure class="decor --first">
+            <img src="/wp-content/uploads/2025/04/heart-2.png" alt="<?=get_bloginfo()?>" width="100%" height="100%">
+        </figure>
+        <figure class="decor --second">
+            <img src="/wp-content/uploads/2025/04/heart-2.png" alt="<?=get_bloginfo()?>" width="100%" height="100%">
+        </figure>
     </section>
 
 <?php
