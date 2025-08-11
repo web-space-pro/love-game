@@ -1,7 +1,5 @@
 @use '../helpers/index' as *;
-.tplArchive{
-  margin: fluid(100,50) 0;
-}
+
 .grid-archive{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -10,6 +8,67 @@
     grid-template-columns: repeat(2, 1fr);
   }
   @include media(xl){
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.archive-posts{
+  margin: fluid(100,50) 0;
+  .heading{
+    padding: fluid(60,40) 0;
+  }
+  .pagination-wrap{
+    margin-top: fluid(70,40);
+    .pagination {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin-bottom: fluid(120,50)
+    }
+    .pagination__arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent);
+      border-radius: 0.125rem;
+      color: white;
+      width: clamp(28px, 6vw, 48px);
+      height: clamp(28px, 6vw, 48px);
+      cursor: pointer;
+    }
+    .nav-links {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .page-numbers {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(28px, 5vw, 30px);
+      height: clamp(28px, 5vw, 30px);
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: black;
+    }
+    .page-numbers.current {
+      color: var(--accent);
+      pointer-events: none;
+    }
+    .page-numbers.prev,
+    .page-numbers.next {
+      width: clamp(28px, 6vw, 48px);
+      height: clamp(28px, 6vw, 48px);
+    }
+    .page-numbers.dots {
+      color: black;
+      opacity: 0.5;
+    }
   }
 }

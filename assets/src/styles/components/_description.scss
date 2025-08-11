@@ -1,0 +1,16 @@
+@use '../helpers/index' as *;
+.description{
+  padding: fluid(100,40) 0;
+  h2{
+    text-align: center;
+    span{
+      font-family: var(--second-family);
+    }
+  }
+  &__desc{
+    margin: fluid(20,40) auto;
+    *{
+      margin-bottom: 16px;
+    }
+  }
+}

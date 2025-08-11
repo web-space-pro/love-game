@@ -1,0 +1,16 @@
+@use '../helpers/index' as *;
+.myBlog{
+  padding: fluid(60,40) 0;
+  &__title{
+    span{
+      font-family: var(--second-family);
+    }
+  }
+  &__text{
+    margin: fluid(20,40) auto;
+  }
+  &__link{
+    text-align: center;
+    margin: fluid(20,40) auto;
+  }
+}

@@ -10,28 +10,22 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="gutenberg">
-        <div class="entry-header">
-            <?php
-            if ( is_singular() ) :
-                the_title( '<h1 class="entry-title">', '</h1>' );
-            else :
-                the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-            endif;
-
-
-            ?>
-        </div>
-        <div class="wp-block-content">
-            <?=get_the_content();?>
-            <?php if ( 'post' === get_post_type() ) :?>
-            <div class="entry-meta">
-                <?php
-                love_not_game_posted_on();
-                love_not_game_posted_by();
-                ?>
-            </div>
+    <div class="post-card">
+        <a href="<?php the_permalink(); ?>" target="_self" class="post-card--link">
+            <?php if (has_post_thumbnail()) : ?>
+                <figure class="post-card--img">
+                    <img
+                            src="<?php the_post_thumbnail_url('full'); ?>"
+                            alt="<?php the_title_attribute(); ?>"
+                    />
+                </figure>
             <?php endif; ?>
-        </div>
+            <div class="post-card--content">
+                <h3 class="post-card--title">
+                    <?php the_title(); ?>
+                </h3>
+                <p class="post-card--text"><?php echo get_the_date('d F Y'); ?></p>
+            </div>
+        </a>
     </div>
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
